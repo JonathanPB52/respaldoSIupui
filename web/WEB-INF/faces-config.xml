@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    
+    <application>
+        <locale-config>
+            <default-locales>es</default-locales>
+            <supported-locale>es</supported-locale>
+            <supported-locale>en</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>Language.App</base-name>
+            <var>msjApp</var>
+        </resource-bundle>
+        
+        <resource-bundle>
+            <base-name>Language.index</base-name>
+            <var>msjindex</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Language.login</base-name>
+            <var>msjlogin</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Language.Userlogueado</base-name>
+            <var>msjUserlogueado</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Language.MenuDinamic</base-name>
+            <var>msjMenuDinamic</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Language.ListarYeditarNiño</base-name>
+            <var>msjListarYeditarNiño</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Language.ListarYeditarAcudiente</base-name>
+            <var>msjListarYeditarAcudiente</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Language.FormularioAcudiiente</base-name>
+            <var>msjFormularioAcudiente</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Language.FormularioNiño</base-name>
+            <var>msjFormularioNiño</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Language.crearDonacion</base-name>
+            <var>msjcrearDonacion</var>
+        </resource-bundle>
+        
+        
+        
+        
+        
+        <resource-bundle>
+            <base-name>Idiomas.AlertasTablas</base-name>
+            <var>msjAlertasTablas</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.AlertaCorreo</base-name>
+            <var>msjAlertasCorreo</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.EnvioCorreo</base-name>
+            <var>msjEnvioCorreo</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaUsuarios</base-name>
+            <var>msjTUsuario</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaReciclaje</base-name>
+            <var>msjTReciclaje</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaNovedad</base-name>
+            <var>msjTNovedad</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaNiño</base-name>
+            <var>msjTNiño</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaAcudiente</base-name>
+            <var>msjTAcudiente</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaDonante</base-name>
+            <var>msjTDonante</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaDonacion</base-name>
+            <var>msjTDonacion</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaCurso</base-name>
+            <var>msjTCurso</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaComedor</base-name>
+            <var>msjTComedor</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaBeneficiado</base-name>
+            <var>msjTBeneficiado</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.TablaActividad</base-name>
+            <var>msjTActividad</var>
+        </resource-bundle>
+    </application>
+</faces-config>

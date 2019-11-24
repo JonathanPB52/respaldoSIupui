@@ -32,9 +32,9 @@ public class DonacionFacade extends AbstractFacade<Donacion> {
     }
     
     public List<Donacion> listar(){
-        Query q = em.createNativeQuery("SELECT donacion.Id AS donacion_Id, donacion.cantidadDonada AS donacion_cantidadDonada, tipo_donacion.tipoDonacion AS tipo_donacion_tipoDonacion FROM tipo_donacion tipo_donacion INNER JOIN donacion donacion ON tipo_donacion.Id = donacion.tipoDonacion", Donacion.class);
-        List<Donacion> lst;
-        return q.getResultList();
+        Query q = em.createNativeQuery("SELECT Id, tipoDonacion, cantidadDonada FROM donacion ", Donacion.class);
+        List<Donacion> lst=q.getResultList();
+        return lst;
     }
     
 }

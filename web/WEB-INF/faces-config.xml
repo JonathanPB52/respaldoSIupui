@@ -112,5 +112,17 @@
             <base-name>Idiomas.TablaActividad</base-name>
             <var>msjTActividad</var>
         </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.ActividadCCurso</base-name>
+            <var>msjTAccurso</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.RegistrarActividad</base-name>
+            <var>msjRegistrarActividad</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>Idiomas.ActividadErrorExito</base-name>
+            <var>msjActividadErrorExito</var>
+        </resource-bundle>
     </application>
 </faces-config>

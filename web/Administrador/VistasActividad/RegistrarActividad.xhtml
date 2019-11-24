@@ -18,7 +18,7 @@
 
     </h:head>
     <h:body>
-        <f:view>
+        <f:view locale="#{sessionController.languageSelected}">
 
             <div class="section container" >
                 <div class="row">
@@ -26,10 +26,10 @@
                     <h:form class="col s12">
                         <div class="row card-panel">
                             <div class="col s12">
-                                <h3>Curso seleccionado</h3>
+                                <h3>#{msjRegistrarActividad.infoCurso}</h3>
                             </div>
                             <div class="col s6">
-                                <p:outputLabel value="Nombre de curso:"/>
+                                <p:outputLabel value="#{msjRegistrarActividad.nombreCUrso}:"/>
                             </div>
                             <div class="col s6">
                                 <p:outputLabel value="#{ActividadControlador.curso.nombreCurso}" ></p:outputLabel>
@@ -39,37 +39,37 @@
                     <h:form class="col s12">
                         <div class="row card-panel">
                             <div class="col s12" >
-                                <h3>Informacion de actividad</h3>
+                                <h3>#{msjRegistrarActividad.infoActividad}</h3>
                             </div>
                             <div class="col s6">
-                                <h:outputLabel value="Fecha de la actividad:" />
+                                <h:outputLabel value="#{msjRegistrarActividad.fechaActi}:" />
                             </div>
                             <div class="col s6">
                                 <h:inputText id="fecha" class="datepicker" value="#{ActividadControlador.actividad.fechaActividad}" title="FechaActividad" required="true" requiredMessage="The FechaActividad field is required.">
-                                    <f:convertDateTime pattern="yyyy-mm-dd" />
+                                    <f:convertDateTime pattern="yyyy-MM-dd" />
                                 </h:inputText>
                             </div>
                             <div class="col s6">
-                                <h:outputLabel value="Descripcion:" for="descripcion" />
+                                <h:outputLabel value="#{msjRegistrarActividad.descripcion}:" for="descripcion" />
                             </div>
                             <div class="col s6">
                                 <h:inputTextarea class="materialize-textarea" rows="4" cols="30" id="descripcion" value="#{ActividadControlador.actividad.descripcion}" title="Descripcion" required="true" requiredMessage="The Descripcion field is required."/>
 
                             </div>
                             <div class="col s12">
-                                <p:commandButton class="btn" value="Registrar" action="#{ActividadControlador.Registrar()}">
-                                    <p:confirm  header="Confirmación" message="Estas seguro que deseas Registrar estos datos?" icon="ui-icon-alert" />
+                                <p:commandButton class="btn" value="#{msjRegistrarActividad.registrarBtn}" action="#{ActividadControlador.Registrar()}">
+                                    <p:confirm  header="#{msjRegistrarActividad.confim}" message="#{msjRegistrarActividad.dialogo}" icon="ui-icon-alert" />
                                 </p:commandButton>
                             </div>
 
                             <p:confirmDialog style="background: white" class="animated flipInX" global="true" showEffect="fade">
-                                <p:commandButton value="Si" type="button" styleClass="ui-confirmdialog-yes btn" icon="ui-icon-check"/>
-                                <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no btn" icon="ui-icon-close"/>
+                                <p:commandButton value="#{msjRegistrarActividad.si}" type="button" styleClass="ui-confirmdialog-yes btn" icon="ui-icon-check"/>
+                                <p:commandButton value="#{msjRegistrarActividad.no}" type="button" styleClass="ui-confirmdialog-no btn" icon="ui-icon-close"/>
                             </p:confirmDialog>
                         </div>
                     </h:form>
                     <div class="fixed-action-btn">
-                        <a href="VistasCurso.xhtml" title="Seleccionar otro curso" class="btn-floating btn-large icon-undo2"></a>
+                        <a href="VistasCurso.xhtml" title="#{msjRegistrarActividad.volver}" class="btn-floating btn-large icon-undo2"></a>
                     </div>
                 </div>
             </div>

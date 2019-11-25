@@ -154,6 +154,8 @@ public class DonacionControlador implements Serializable{
         
         String mensaje;
         
+        int idRegistro=1;
+        
         try {
             //reciclaje
             
@@ -183,6 +185,7 @@ public class DonacionControlador implements Serializable{
             donacion.setTipoDonacion(tipoDonacionFacade.find(tipoDonacion.getId()));
             donacion.setDonante(donanteFacade.find(donante.getId()));
             donacion.setEvidenciaDonacion(pathReal1);
+            donacion.setIdRegistro(idRegistro);
             donacionFacade.create(donacion);
             donacion = new Donacion();
 

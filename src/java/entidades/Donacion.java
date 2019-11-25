@@ -21,6 +21,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -35,7 +37,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Donacion.findById", query = "SELECT d FROM Donacion d WHERE d.id = :id")
     , @NamedQuery(name = "Donacion.findByFechaDeEntrada", query = "SELECT d FROM Donacion d WHERE d.fechaDeEntrada = :fechaDeEntrada")
     , @NamedQuery(name = "Donacion.findByCantidadDonada", query = "SELECT d FROM Donacion d WHERE d.cantidadDonada = :cantidadDonada")
-    , @NamedQuery(name = "Donacion.findByBienDonado", query = "SELECT d FROM Donacion d WHERE d.bienDonado = :bienDonado")})
+    , @NamedQuery(name = "Donacion.findByBienDonado", query = "SELECT d FROM Donacion d WHERE d.bienDonado = :bienDonado")
+    , @NamedQuery(name = "Donacion.findByIdRegistro", query = "SELECT d FROM Donacion d WHERE d.idRegistro = :idRegistro")})
 public class Donacion implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -45,19 +48,27 @@ public class Donacion implements Serializable {
     @Column(name = "Id")
     private Integer id;
     @Basic(optional = false)
+    @NotNull
     @Column(name = "fechaDeEntrada")
     @Temporal(TemporalType.DATE)
     private Date fechaDeEntrada;
     @Basic(optional = false)
+    @NotNull
     @Column(name = "cantidadDonada")
     private int cantidadDonada;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
     @Column(name = "bienDonado")
     private String bienDonado;
     @Basic(optional = false)
+    @NotNull
     @Lob
+    @Size(min = 1, max = 65535)
     @Column(name = "evidenciaDonacion")
     private String evidenciaDonacion;
+    @Column(name = "idRegistro")
+    private Integer idRegistro;
     @JoinColumn(name = "tipoDonacion", referencedColumnName = "Id")
     @ManyToOne(optional = false)
     private TipoDonacion tipoDonacion;
@@ -121,6 +132,14 @@ public class Donacion implements Serializable {
 
     public void setEvidenciaDonacion(String evidenciaDonacion) {
         this.evidenciaDonacion = evidenciaDonacion;
+    }
+
+    public Integer getIdRegistro() {
+        return idRegistro;
+    }
+
+    public void setIdRegistro(Integer idRegistro) {
+        this.idRegistro = idRegistro;
     }
 
     public TipoDonacion getTipoDonacion() {

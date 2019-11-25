@@ -52,12 +52,11 @@ public class ChartBean implements Serializable {
 
         for (int i = 0; i < donacionFacade.listar().size();) {
             ChartSeries serie = new BarChartSeries();
-            if (donacionFacade.listar().get(i).getCantidadDonada() != 0)   {
-                serie.setLabel(donacionFacade.listar().get(i).getBienDonado());
-                serie.set(donacionFacade.listar().get(i).getDonante(),donacionFacade.listar().get(i).getCantidadDonada());
+           
+                serie.setLabel(donacionFacade.listar().get(i).getTipoDonacion().getTipoDonacion());
+                serie.set(donacionFacade.listar().get(i).getTipoDonacion().getTipoDonacion(),donacionFacade.listar().get(i).getIdRegistro());
                 barra.addSeries(serie);
-            }
-
+            
         }
         
         barra.setTitle("Cantidad de donaciones");
@@ -72,7 +71,7 @@ public class ChartBean implements Serializable {
         Axis yAxis = barra.getAxis(AxisType.Y);
         yAxis.setLabel("Cantidad de la donacion");
         yAxis.setMin(0);
-        yAxis.setMax(100000);
+        yAxis.setMax(20);
         
 
     }
